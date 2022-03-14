@@ -1,0 +1,155 @@
+.navbar {
+  width: 100%;
+
+  background-color: #1b47e5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+  &__logo {
+    height: 3.2rem;
+    margin: 0.8rem 1.6rem 0.8rem 1.6rem;
+  }
+}
+
+.logo-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+//change for all other forms
+form {
+  width: 25.2rem;
+  height: 2.4rem;
+  background-color: $color-gray-1;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 1.2rem;
+}
+
+//change for all other inputs
+input {
+  width: 20.4rem;
+  height: 2.4rem;
+  background-color: transparent;
+  border-radius: 1rem;
+  border: none;
+  padding: 0.8rem;
+  font-family: $font-default;
+  color: $color-gray-5;
+  &:focus {
+    outline: none;
+  }
+}
+
+.navbar__form {
+  width: 25.2rem;
+  height: 2.4rem;
+  background-color: $color-gray-1;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 1.2rem;
+}
+
+.navbar__input {
+  width: 20.4rem;
+  height: 2.4rem;
+  background-color: transparent;
+  border-radius: 1rem;
+  border: none;
+  padding: 0.8rem;
+  font-family: $font-default;
+  color: $color-gray-5;
+  &:focus {
+    outline: none;
+  }
+}
+
+.navbar__button {
+  width: 2.4rem;
+  height: 1.6rem;
+  background-color: $color-gray-6;
+  border-radius: 1.5rem;
+  margin: 0.4rem;
+  margin-top: 0.6rem;
+  cursor: pointer;
+}
+
+.navbar__button-img {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-left: 0.4rem;
+}
+
+@include respond(tab-land) {
+  .navbar {
+    &__logo {
+      padding-left: 2.4rem;
+      height: 7.2rem;
+    }
+  }
+
+  .navbar__form {
+    height: 3.2rem;
+    width: 34.5rem;
+  }
+
+  .navbar__input {
+    height: 3.2rem;
+    width: 30.6rem;
+  }
+
+  .navbar__button {
+    width: 3.2rem;
+    height: 2.4rem;
+  }
+
+  .navbar__button-img {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.4rem;
+  }
+
+  .auth-links {
+    position: static;
+    padding-right: 6.4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__link {
+      text-decoration: none;
+      color: $color-white;
+      cursor: pointer;
+      font-size: 1.6rem;
+     
+    }
+  }
+
+  .navbar-account {
+    color: $color-white;
+    font-size: 1.6rem;
+  }
+
+  .dropdown-links__link {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.6rem;
+    padding: 1.2rem;
+    & span {
+      color: $color-white;
+      font-size: 1.2rem;
+    }
+    &:hover {
+      background-color: $color-gray-4;
+    }
+  }
+}

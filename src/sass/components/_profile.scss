@@ -1,0 +1,110 @@
+.profile-container {
+  color: $color-gray-6;
+}
+
+.user-info {
+  margin-left: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  &__img {
+    width: 6.4rem;
+    height: 6.4rem;
+    object-fit: cover;
+    margin-right: 1.2rem;
+  }
+  &__name {
+    font-size: 1.6rem;
+  }
+  &__date {
+    margin: 1.2rem 0 0 0;
+    font-size: 1.2rem;
+    color: $color-gray-4;
+  }
+}
+
+.user-releases {
+  margin: 3.2rem 0 0 1.2rem;
+
+  &__header {
+    font-size: 1.6rem;
+    margin: 0 0 2.4rem 0;
+  }
+}
+
+.statistics {
+  display: grid;
+  grid-template-columns: 12.8rem 2.4rem;
+
+  &__link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: $color-gray-6;
+
+    &:hover {
+      color: $color-gray-4;
+    }
+    &--number {
+      text-align: end;
+    }
+  }
+}
+
+.addedBy {
+  font-size: 1.6rem;
+  margin-left: 1.2rem;
+}
+
+.activity {
+  margin: 3.2rem 1.2rem 4.8rem 1.2rem;
+  &__header {
+    font-size: 1.6rem;
+    margin: 0 0 2.4rem 0;
+  }
+}
+
+.activity-item {
+  display: flex;
+  flex-direction: row;
+
+  &__img {
+    width: 6.4rem;
+    height: 6.4rem;
+  }
+  &__info {
+    font-size: 1.4rem;
+    margin: 0 0 0.8rem 0.8rem;
+  }
+  &__date {
+    font-size: 1.2rem;
+    margin: 0 0 0 0.8rem;
+    color: $color-gray-4;
+  }
+}
+
+@include respond(tab-land) {
+  .profile-container {
+    margin-top: 5.2rem;
+  }
+  .profile-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5.2rem;
+  }
+  .activity {
+    margin: 0 1.2rem 4.8rem 6.4rem;
+  }
+  .profile-cover {
+    background-image: url("./img/cover.png");
+    height: 25.6rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .user-photo {
+    position: absolute;
+    top: 15.8rem;
+    left: 6.4rem;
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+  }
+}

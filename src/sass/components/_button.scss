@@ -1,0 +1,134 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 38px;
+  outline: none;
+  color: white;
+
+  font-size: 2rem;
+  font-weight: 500;
+  background-color: #1b47e5;
+
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-black {
+  background-color: $color-gray-6;
+  color: $color-white;
+  &:hover {
+    background-color: $color-gray-5;
+  }
+
+  &--reset {
+    margin-bottom: 2.4rem;
+  }
+  &--remove {
+    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
+  }
+  &--upload {
+    height: 3.2rem;
+    padding: 0.8rem 1.6rem 0.8rem 1.6rem;
+  }
+  &--preview {
+    margin-top: 2.4rem;
+  }
+  &--modal {
+    margin: 0 0.4rem 1px 0.4rem;
+  }
+  &--search {
+    width: 7.5rem;
+  }
+}
+
+.btn-white {
+  background-color: $color-white;
+  color: $color-gray-6;
+  &:hover {
+    background-color: $color-gray-1;
+  }
+}
+
+.btn-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 38px;
+  outline: none;
+  color: white;
+
+  font-size: 2rem;
+  font-weight: 500;
+
+  &--facebook {
+    background-color: hsl(220, 46%, 48%);
+    &:hover {
+      background-color: hsl(220, 46%, 58%);
+    }
+  }
+
+  &--google {
+    background-color: hsl(0, 60%, 53%);
+    &:hover {
+      background-color: hsl(0, 60%, 63%);
+    }
+  }
+}
+
+.btn-border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 38px;
+  outline: none;
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+  background-color: #1b47e5;
+
+  &:hover {
+    background-color: $color-gray-1;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--album {
+    margin: 0;
+
+    &:first-of-type {
+      margin-top: 3.2rem;
+    }
+
+    &:last-of-type {
+      margin-top: 1.2rem;
+    }
+  }
+}
+
+.btn-submit-file {
+  background-color: $color-gray-1;
+  border-radius: 0.4rem;
+  color: $color-gray-6;
+  min-width: 31.9rem;
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
+
+  &:hover {
+    background-color: $color-gray-2;
+  }
+}

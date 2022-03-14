@@ -1,0 +1,33 @@
+@import "variables";
+@import "utilities";
+@import "mixins";
+@import "base";
+
+@import "components/navbar";
+@import "components/hamburger";
+@import "components/footer";
+@import "components/authentication";
+@import "components/button";
+@import "components/navbarProfile";
+@import "components/collection";
+@import "components/sort";
+@import "components/grid";
+@import "components/pagination";
+@import "components/upload";
+@import "components/albumCard";
+@import "components/modal";
+
+//main page
+@import "components/hero";
+@import "components/subscribe";
+@import "components/landingpage";
+@import "components/recentlyAdded";
+
+//album page
+@import "components/albumPage";
+
+//profile page
+@import "components/profile";
+
+//search
+@import "components/search";

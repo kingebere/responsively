@@ -1,0 +1,16 @@
+.pagination-navigation {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__paragraph {
+    font-size: 1.4rem;
+    color: $color-gray-3;
+  }
+}
