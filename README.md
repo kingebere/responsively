@@ -1,6 +1,6 @@
-# Music-DB - music database
+# Responsively
 
-Simple Discogs clone built with React and Firebase.
+Responsively built with React and Firebase.
 
 ## Table of Contents
 
@@ -12,11 +12,11 @@ Simple Discogs clone built with React and Firebase.
 
 ## Introduction
 
-This project is a simplistic clone of Discogs - database of information about music artists, albums, labels, and genres. I have built it with the aim to dive deep into React and make a "real-world" application with authentication and realtime database provided by Firebase.
+This project is Responsively - database of screenshots of websites' breakpoints. I have built it with the aim to dive deep into React and make a "real-world" application with authentication and realtime database provided by Firebase.
 
 ## Demo
 
-Live demo https://music-db.vercel.app/
+Live demo https://clone-practice-30ea3.web.app/
 
 ## Technologies
 
@@ -37,14 +37,12 @@ Features for unauthenticated users:
 
 Features for authenticated users only:
 
-- add/remove an album to/from user's collection and wishlist
-- switch between grid/row view for user's collection and wishlist
-- sort albums by date added to database, artist, album, genre, release year
-- upload new album to the database
+- add/remove an album to/from user's likes and bookmark
+- switch between grid/row view for user's likes and bookmark
+
 - view all albums uploaded by the current user
 - view user's activity log for the past month
 
 ## To-do
 
-- to extend the album page with track list
-- to create video selector for adding youtube videos to the album page
+- Switch to typescript
