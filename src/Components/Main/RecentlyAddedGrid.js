@@ -45,7 +45,7 @@ function RecentlyAddedGrid(props) {
   };
 
   return (
-    <div className='recentlyAdded newed'>
+    <div className='recentlyAdded newedj'>
       <div className='recentlyAdded__container'>
         <div className='recentlyAdded__row'>
           {albumItems.length === 0 ? (
