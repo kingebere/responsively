@@ -22,15 +22,6 @@ function RecentlyAddedGrid(props) {
             ></img>
           </Link>
           <p className='grid-album__paragraph'>
-            {/* <div>
-              <Link
-                className='grid-album__h1'
-                to={`/search/${album.artist}/artist`}
-              >
-                {album.artist}
-              </Link>
-            </div> */}
-
             <div>
               <Link className='grid-album__h1' to={`/albums/${album.id}`}>
                 {album.title}
@@ -54,7 +45,7 @@ function RecentlyAddedGrid(props) {
   };
 
   return (
-    <div className='recentlyAdded news'>
+    <div className='recentlyAdded newed'>
       <div className='recentlyAdded__container'>
         <div className='recentlyAdded__row'>
           {albumItems.length === 0 ? (
