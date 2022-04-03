@@ -414,25 +414,28 @@ input {
   .btn:focus {
     outline: none; }
 
-.btn-black {
-  background-color: #1f1f1f;
-  color: white; }
-  .btn-black:hover {
-    background-color: #444444; }
-  .btn-black--reset {
-    margin-bottom: 2.4rem; }
-  .btn-black--remove {
-    margin-top: 3.2rem;
-    margin-bottom: 3.2rem; }
-  .btn-black--upload {
-    height: 3.2rem;
-    padding: 0.8rem 1.6rem 0.8rem 1.6rem; }
-  .btn-black--preview {
-    margin-top: 2.4rem; }
-  .btn-black--modal {
-    margin: 0 0.4rem 1px 0.4rem; }
-  .btn-black--search {
-    width: 7.5rem; }
+.btn-black:hover {
+  background-color: #444444; }
+
+.btn-black--reset {
+  margin-bottom: 2.4rem; }
+
+.btn-black--remove {
+  margin-top: 3.2rem;
+  margin-bottom: 3.2rem; }
+
+.btn-black--upload {
+  height: 3.2rem;
+  padding: 0.8rem 1.6rem 0.8rem 1.6rem; }
+
+.btn-black--preview {
+  margin-top: 2.4rem; }
+
+.btn-black--modal {
+  margin: 0 0.4rem 1px 0.4rem; }
+
+.btn-black--search {
+  width: 7.5rem; }
 
 .btn-white {
   background-color: white;
@@ -801,7 +804,6 @@ input {
     display: none; }
   .modal__div {
     background-color: white;
-    width: 80%;
     max-width: 37.5rem;
     padding: 1.6rem;
     border-radius: 0.5rem;
@@ -1137,7 +1139,7 @@ input {
   .album-card__button-wrapper {
     overflow-x: scroll;
     display: grid;
-    grid-template-columns: repeat(6, 100px);
+    grid-template-columns: repeat(6, 1fr);
     gap: 12px;
     padding: 8px 0 8px 12px;
     border-bottom: 1px solid #a2a3b1;

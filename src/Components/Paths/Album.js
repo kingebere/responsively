@@ -137,6 +137,9 @@ function Album(props) {
     setResult(d);
     setValues(x);
   };
+  const dave = () => {
+    setShowLogin(false);
+  };
   const toggleModal = () => {
     if (!currentUser) {
       setShowLogin(true);
@@ -261,7 +264,7 @@ function Album(props) {
                 </div>
                 <div>
                   <h1 className="album-card__link">
-                    Site-link: <a href="https://spotify.com">Spotify</a>
+                    Site-link: <a href="https://trybrass.com">Trybrass</a>
                   </h1>
                 </div>
               </div>
@@ -315,7 +318,11 @@ function Album(props) {
                 <button className="btn btn-black btn-black--modal">
                   <a href="/login">Yes</a>
                 </button>
-                <button className="btn btn-black btn-black--modal">No</button>
+                <button
+                  className="btn btn-black btn-black--modal"
+                  onClick={dave}>
+                  No
+                </button>
               </div>
             </div>
           </Modal>
