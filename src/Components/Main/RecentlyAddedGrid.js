@@ -16,6 +16,7 @@ function RecentlyAddedGrid(props) {
             to={`/albums/${album.id}`}
           >
             <img
+            
               className='grid-album__img'
               src={album.url}
               alt={`${album.title}  `}

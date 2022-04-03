@@ -89,15 +89,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 3rem;
+  padding: 1rem 1rem;
   cursor: pointer;
   border: none;
-  border-radius: 38px;
+  border-radius: 9px;
   outline: none;
   color: white;
   font-size: 2rem;
   font-weight: 500;
-  background-color: #1b47e5;
+  background-color: #c6c8d1;
 
   &:hover {
     background-color: $color-gray-1;
@@ -105,18 +105,6 @@
 
   &:focus {
     outline: none;
-  }
-
-  &--album {
-    margin: 0;
-
-    &:first-of-type {
-      margin-top: 3.2rem;
-    }
-
-    &:last-of-type {
-      margin-top: 1.2rem;
-    }
   }
 }
 
@@ -132,3 +120,4 @@
     background-color: $color-gray-2;
   }
 }
+

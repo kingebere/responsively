@@ -8,3 +8,155 @@
   align-items: center;
   justify-content: center;
 }
+
+.album-card {
+  flex: 0 0 100%;
+  max-width: 100%;
+
+  &__container {
+    max-width: 1258px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &__two {
+    flex-direction: column-reverse;
+    gap: 26px;
+    display: flex;
+  }
+  @media (min-width: 881px) {
+    &__two {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0;
+      margin-right: -15px;
+      margin-left: -15px;
+      flex-direction: row;
+    }
+  }
+
+  &__img {
+    pointer-events: none;
+  }
+  &__imgg {
+    display: flex;
+    flex-direction: column;
+    -webkit-user-select: none;
+    justify-content: center;
+    user-select: none;
+  }
+  &__img-wrapper {
+    display: flex;
+    margin-top: 1.2rem;
+    align-self: center;
+    border: 1px solid #dce0f1;
+    justify-content: center;
+  }
+  &__dope {
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    gap: 12px;
+    flex-direction: column;
+    padding: 24px;
+    background: #e7e7f3;
+  }
+  &__dope > h1 {
+    font-size: 1.8rem;
+  }
+  &__doper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  &__link {
+    font-size: 1.5rem;
+  }
+  &__span {
+    font-size: 1.5rem;
+  }
+  &__wrappers {
+    display: flex;
+    flex-direction: column;
+  }
+  &__imgj {
+    height: 25px;
+    width: 25px;
+  }
+  &__background {
+    padding: 50px 0;
+  }
+  &__img-placeholder {
+    font-size: 2rem;
+    line-height: 1.3;
+    color: #121212;
+    font-weight: 600;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.1rem 1.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 38px;
+    outline: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: 500;
+    background-color: #1b47e5;
+  }
+  &__button--normal {
+    background-color: #1b47e5;
+  }
+  &__button--dark {
+    background-color: #112158;
+  }
+  &__button-wrapper {
+    overflow-x: scroll;
+    display: grid;
+    grid-template-columns: repeat(6, 100px);
+    gap: 12px;
+    padding: 8px 0 8px 12px;
+    border-bottom: 1px solid #a2a3b1;
+    border-top: 1px solid #a2a3b1;
+    width: 100%;
+  }
+  &__button-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  &__info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  @media (min-width: 881px) {
+    &__info {
+      position: sticky;
+      width: 100%;
+      flex: 0 0 30%;
+      max-width: 30%;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+}
+
+@media (min-width: 881px) {
+  .album-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-start;
+    width: 100%;
+    flex: 0 0 70%;
+    max-width: 70%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+

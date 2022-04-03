@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { firebaseDB } from "../Auth/FirebaseInit";
-import AlbumCard from "../Paths/AlbumCard";
+import Album from "../Paths/Album";
 import { addToDBCollection } from "../Helpers/addToDBCollection";
 
 function Preview(props) {
@@ -101,11 +101,10 @@ function Preview(props) {
       <div style={uploaded ? { display: "none" } : { display: "block" }}>
         <h3 className="upload-header">Preview</h3>
         <div className="upload-container upload-container--preview">
-          <AlbumCard album={album} />
+          <Album album={album} />
           <button
             className="btn btn-black btn-black--preview"
-            onClick={handleSubmit}
-          >
+            onClick={handleSubmit}>
             Submit
           </button>
         </div>
@@ -116,3 +115,4 @@ function Preview(props) {
 }
 
 export default Preview;
+

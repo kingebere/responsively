@@ -52,6 +52,7 @@ function DesktopDropdown(props) {
               <Link
                 className='dropdown-links__link'
                 to={`/profile/${currentUser.displayName}`}
+                
               >
                 Profile: <span>{currentUser.displayName}</span>
               </Link>

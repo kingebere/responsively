@@ -21,6 +21,7 @@ function App() {
         <Navbar />
         <Router>
           <MainPageContent path='/' />
+          
           <LogIn path='/login' />
           <SignUp path='/signup' />
           <ForgotPassword path='/forgotPassword' />
