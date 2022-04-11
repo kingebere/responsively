@@ -21,6 +21,7 @@ function Album(props) {
   const [showModalWishlist, setShowModalWishlist] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
   const [update, setUpdate] = useState(true);
+  const [load, setLoad] = useState(false);
   const [filter, setFilter] = useState([]);
   const [result, setResult] = useState([]);
   const [values, setValues] = useState([]);
@@ -129,14 +130,22 @@ function Album(props) {
     if (album.reference) {
       const y = album.reference.map((res) => res.breakpoint);
       setFilter(y);
+      setValues(y[0]);
+      const d = album.reference.filter((xi) => xi.breakpoint === y[0]);
+      setResult(d);
     }
   }, [album.reference]);
 
   const filtered = (x) => {
+    setLoad(true);
     const d = album.reference.filter((xi) => xi.breakpoint === x);
-    setResult(d);
+
     setValues(x);
+    setResult(d);
+
+    setLoad(false);
   };
+  console.log(load);
   const dave = () => {
     setShowLogin(false);
   };
@@ -195,9 +204,7 @@ function Album(props) {
 
             <div className="album-card__img-wrapper">
               {result.length === 0 ? (
-                <div className="album-card__img-placeholder">
-                  Please select a breakpoint
-                </div>
+                <div className="album-card__img-placeholder">Loading...</div>
               ) : (
                 result.map((x) => {
                   return (
@@ -259,12 +266,12 @@ function Album(props) {
               <div className="album-card__wrappers">
                 <div>
                   <h1 className="album-card__span">
-                    Font-family: <span>Circular</span>
+                    Font-family: <span>{album.fontfamily}</span>
                   </h1>
                 </div>
                 <div>
                   <h1 className="album-card__link">
-                    Site-link: <a href="https://trybrass.com">Trybrass</a>
+                    Site-link: <a href={album.website}>{album.website}</a>
                   </h1>
                 </div>
               </div>
@@ -278,7 +285,7 @@ function Album(props) {
               <h3>Do you want to remove this album from your collection?</h3>
               <div>
                 <button
-                  className="btn btn-black btn-black--modal"
+                  className="btn btn-black btn-black--error"
                   onClick={handleRemoveFromCollection}>
                   Yes
                 </button>
@@ -297,7 +304,7 @@ function Album(props) {
               <h3>Do you want to remove this album from your wishlist?</h3>
               <div>
                 <button
-                  className="btn btn-black btn-black--modal"
+                  className="btn btn-black btn-black--error"
                   onClick={handleRemoveFromWishlist}>
                   Yes
                 </button>
@@ -316,10 +323,12 @@ function Album(props) {
               <h3>Please Login</h3>
               <div>
                 <button className="btn btn-black btn-black--modal">
-                  <a href="/login">Yes</a>
+                  <a className="btn-href" href="/login">
+                    Yes
+                  </a>
                 </button>
                 <button
-                  className="btn btn-black btn-black--modal"
+                  className="btn btn-black btn-black--error"
                   onClick={dave}>
                   No
                 </button>

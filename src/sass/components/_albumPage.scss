@@ -98,21 +98,25 @@
     font-weight: 600;
   }
   &__button {
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
-    padding: 0.1rem 1.5rem;
+    padding: 0.31rem;
+
     cursor: pointer;
-    border: none;
+    border: 1px solid #d2d2ed;
     border-radius: 38px;
     outline: none;
-    color: white;
-    font-size: 2rem;
+    color: #fff;
+    font-size: 1.6rem;
     font-weight: 500;
-    background-color: #1b47e5;
   }
   &__button--normal {
     background-color: #1b47e5;
+  }
+  &__button--normal:hover {
+    background-color: #112158;
   }
   &__button--dark {
     background-color: #112158;

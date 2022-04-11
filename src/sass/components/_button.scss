@@ -18,7 +18,9 @@
     outline: none;
   }
 }
-
+.btn-href {
+  color: white;
+}
 .btn-black {
   &:hover {
     background-color: $color-gray-5;
@@ -43,6 +45,11 @@
   }
   &--search {
     width: 7.5rem;
+  }
+  &--error {
+    background: grey;
+    color: #1b1b1e;
+    margin: 0 0.4rem 1px 0.4rem;
   }
 }
 
