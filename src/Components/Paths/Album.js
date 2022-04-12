@@ -271,7 +271,7 @@ function Album(props) {
                 </div>
                 <div>
                   <h1 className="album-card__link">
-                    Site-link: <a href={album.website}>{album.website}</a>
+                    Site-link: <a href={album.website}>Visit Website</a>
                   </h1>
                 </div>
               </div>
