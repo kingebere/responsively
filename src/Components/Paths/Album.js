@@ -25,7 +25,7 @@ function Album(props) {
   const [filter, setFilter] = useState([]);
   const [result, setResult] = useState([]);
   const [values, setValues] = useState([]);
-
+const [transition,setTransition]=useState(false)
   useEffect(() => {
     const albumRef = firebaseDB.collection("Albums").doc(props.id);
     albumRef
@@ -100,6 +100,7 @@ function Album(props) {
     if (!currentUser) {
       setShowLogin(true);
     } else {
+        setTransition(true)
       addToDBCollection(currentUser.uid, "Collection", props.id);
       setUpdate(!update);
     }
@@ -153,8 +154,10 @@ function Album(props) {
     if (!currentUser) {
       setShowLogin(true);
     } else {
+      
       setShowModal(!showModal);
       setUpdate(!update);
+      
     }
     console.log("hgh");
   };
@@ -163,11 +166,21 @@ function Album(props) {
     if (!currentUser) {
       setShowLogin(true);
     } else {
+      
       setShowModalWishlist(!showModalWishlist);
       setUpdate(!update);
     }
     console.log("hgh");
   };
+  const showTransition=()=>{
+    setTransition(false)
+  }
+useEffect(() => {
+    const timeout = setTimeout(() => {
+      showTransition();
+    }, 1000);
+    return () => clearTimeout(timeout);
+  }, [showTransition]);
 
   // if (!currentUser) {
   //   return (
@@ -231,7 +244,7 @@ function Album(props) {
                     <img
                       src={filled}
                       alt="wsecd"
-                      className="album-card__imgj"
+                      className={`album-card__imgj ${transition && "album-card__dopi"}`}
                     />
                   </button>
                 ) : (

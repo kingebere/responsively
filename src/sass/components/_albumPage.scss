@@ -12,7 +12,10 @@
 .album-card {
   flex: 0 0 100%;
   max-width: 100%;
-
+&__dopi{
+  transform:scale(1.2);
+  transition:transform 1s ease-out;
+}
   &__container {
     max-width: 1258px;
     width: 100%;
@@ -87,6 +90,10 @@
   &__imgj {
     height: 25px;
     width: 25px;
+    transition:all 0.5s ease-out;
+  }
+  &__imgj:hover{
+    transform:translateY(10px)
   }
   &__background {
     padding: 50px 0;
