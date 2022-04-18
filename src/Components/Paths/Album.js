@@ -312,7 +312,7 @@ function Album(props) {
                   Copy Link
                 </div>
                 <div className="album-card__divc">
-                  <div style={{ display: "inline-flex", width: "36px" }}>
+                  <div style={{ display: "inline-flex" }}>
                     <a
                       className="album-card__link"
                       target="_blank"
