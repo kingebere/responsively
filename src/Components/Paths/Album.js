@@ -312,6 +312,7 @@ function Album(props) {
                   Copy Link
                 </div>
                 <div className="album-card__divc">
+                  <h2 className="album-card__span">or share via</h2>
                   <div style={{ display: "inline-flex" }}>
                     <a
                       className="album-card__link"
