@@ -1083,7 +1083,27 @@ input {
     color: white;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 2rem; }
+    font-size: 2rem;
+    flex-direction: row;
+    gap: 8px; }
+  .album-card__copyicon {
+    height: 13px;
+    width: 13px;
+    background-color: white;
+    border: 1px solid #1b47e5;
+    position: relative;
+    border-radius: 3px; }
+  .album-card__copyicon::before {
+    content: "";
+    display: inline-block;
+    background-color: white;
+    height: 13px;
+    width: 13px;
+    border: 1px solid #1b47e5;
+    border-radius: 3px;
+    position: absolute;
+    bottom: -4px;
+    left: -5px; }
   .album-card__divc {
     display: flex;
     flex-direction: row;

@@ -305,11 +305,15 @@ function Album(props) {
                 </div>
                 <div>
                   <h1 className="album-card__link">
-                    Site-link: <a href={album.website}>Visit Website</a>
+                    Site-link:{" "}
+                    <a href={album.website} target="_blank">
+                      Visit Website
+                    </a>
                   </h1>
                 </div>
                 <div className="album-card__buttoncopy" onClick={copy}>
-                  Copy Link
+                  <div className="album-card__copyicon"></div>
+                  <div>Copy Link</div>
                 </div>
                 <div className="album-card__divc">
                   <h2 className="album-card__span">or share via</h2>
