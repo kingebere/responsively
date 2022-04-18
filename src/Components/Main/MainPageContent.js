@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import Hero from './Hero';
-import Subscribe from './Subscribe';
-import { firebaseDB } from '../Auth/FirebaseInit';
-import RecentlyAddedGrid from './RecentlyAddedGrid';
-import LandingPage from './LandingPage';
-import { collection, onSnapshot, orderBy, query } from '@firebase/firestore';
+import React, { useState, useEffect } from "react";
+import Hero from "./Hero";
+import Subscribe from "./Subscribe";
+import { firebaseDB } from "../Auth/FirebaseInit";
+import RecentlyAddedGrid from "./RecentlyAddedGrid";
+import LandingPage from "./LandingPage";
+import { collection, onSnapshot, orderBy, query } from "@firebase/firestore";
 
 function MainPageContent() {
   const [recentlyAdded, setRecentlyAdded] = useState([]);
 
   useEffect(() => {
-    const ref = firebaseDB.collection('Albums').orderBy('addedToDB', 'desc');
+    const ref = firebaseDB.collection("Albums").orderBy("addedToDB", "desc");
     ref
       .get()
       .then((querySnapshot) => {
@@ -22,7 +22,7 @@ function MainPageContent() {
               return [...prev, album];
             });
           } else {
-            console.log('No such document!');
+            console.log("No such document!");
           }
         });
       })
@@ -51,3 +51,4 @@ function MainPageContent() {
 }
 
 export default MainPageContent;
+

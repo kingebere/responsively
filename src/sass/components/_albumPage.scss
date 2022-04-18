@@ -12,10 +12,31 @@
 .album-card {
   flex: 0 0 100%;
   max-width: 100%;
-&__dopi{
-  transform:scale(1.2);
-  transition:transform 1s ease-out;
-}
+  &__dopi {
+    transform: scale(1.2);
+    transition: transform 1s ease-out;
+  }
+  &__buttoncopy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 14px 0 4px 0;
+    background-color: #1b47e5;
+    padding: 1rem 2.4rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 2rem;
+  }
+  &__divc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  &__buttoncopy:hover {
+    background-color: #112158;
+  }
   &__container {
     max-width: 1258px;
     width: 100%;
@@ -90,10 +111,10 @@
   &__imgj {
     height: 25px;
     width: 25px;
-    transition:all 0.5s ease-out;
+    transition: all 0.5s ease-out;
   }
-  &__imgj:hover{
-    transform:translateY(10px)
+  &__imgj:hover {
+    transform: translateX(2px);
   }
   &__background {
     padding: 50px 0;
@@ -109,7 +130,7 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-     padding: 0.31rem 1.2rem;
+    padding: 0.31rem 1.2rem;
 
     cursor: pointer;
     border: 1px solid #d2d2ed;
@@ -147,7 +168,9 @@
   }
   @media (min-width: 881px) {
     &__info {
-      position: sticky;
+      position: -webkit-sticky !important;
+      position: sticky !important;
+      top: 7px;
       width: 100%;
       flex: 0 0 30%;
       max-width: 30%;
@@ -170,4 +193,3 @@
     padding-left: 15px;
   }
 }
-
